@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragments.ShopFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/shop_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:text="Foodi"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/nav_cart"
+            android:layout_width="50sp"
+            android:layout_height="55sp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="4sp"
+            android:background="@drawable/rectangle">
+
+            <ImageView
+                android:id="@+id/ic_cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_cart_icon" />
+
+            <TextView
+                android:id="@+id/nb_prod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="-30sp"
+                android:layout_toRightOf="@+id/ic_cart"
+                android:background="@drawable/text_circle_blue"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="8sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50sp">
+
+        <EditText
+            android:id="@+id/numTable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40sp"
+            android:layout_marginRight="40sp"
+            android:background="@drawable/rectangle"
+            android:hint="Search .. "
+            android:paddingLeft="60sp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50sp"
+            android:rotation="-90"
+            android:src="@drawable/ic_tune" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50sp"
+            android:src="@drawable/ic_search" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listCategories"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="20sp"
+        android:horizontalSpacing="1dp" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listProducts"
+        android:layout_width="fill_parent"
+        android:layout_height="480sp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20sp"
+        android:horizontalSpacing="1dp" />
+
+
+</LinearLayout>

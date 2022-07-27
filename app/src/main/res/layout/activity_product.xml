@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ProductActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300sp"
+            android:background="@drawable/half_circle"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/nav_shop"
+                android:layout_width="55sp"
+                android:layout_height="50sp"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="10sp"
+                android:background="@drawable/rectangle_border_white">
+
+                <ImageView
+                    android:id="@+id/ic_return"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_back" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/img_prod"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                android:layout_marginTop="80sp"
+                android:src="@drawable/ic_launcher_background" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="40sp"
+            android:layout_marginBottom="15sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/titleProd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="35sp"
+                android:layout_weight="1"
+                android:text="Pizza Royal"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/priceProd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="35sp"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:text="200 $"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/descProd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_marginLeft="35sp"
+            android:layout_marginRight="35sp"
+            android:layout_marginBottom="75sp"
+            android:scrollbars="vertical"
+            android:text="Pizza Royal Pizza Royal Pizza Royal Pizza Royal Pizza Royal Pizza Royal"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/nav_cart"
+        android:layout_width="150sp"
+        android:layout_height="50sp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10sp"
+        android:background="@drawable/rectangle"
+        android:paddingLeft="20sp"
+        android:paddingRight="20sp">
+
+        <ImageView
+            android:id="@+id/ic_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_next" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/ic_next"
+            android:gravity="left"
+            android:text="View cart"
+            android:textColor="@color/icons"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/minus"
+        android:layout_width="40sp"
+        android:layout_height="45sp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10sp"
+        android:layout_marginBottom="10sp"
+        android:background="@drawable/rectangle_btn">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_remove" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/nb_layout"
+        android:layout_width="40sp"
+        android:layout_height="45sp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15sp"
+        android:layout_toEndOf="@+id/minus">
+
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/plus"
+        android:layout_width="40sp"
+        android:layout_height="45sp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10sp"
+        android:layout_toEndOf="@+id/nb_layout"
+        android:background="@drawable/rectangle_btn_blue">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_add" />
+    </RelativeLayout>
+</RelativeLayout>
